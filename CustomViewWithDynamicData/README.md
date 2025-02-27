@@ -3,6 +3,8 @@
 ## Overview
 **CustomViewWithDynamicData** is a SwiftUI project that demonstrates how to create and display dynamic data in reusable custom views. The project features a simple user list with avatars, names, and email addresses, using SwiftUI components efficiently.
 
+<img width="329" alt="image" src="https://github.com/user-attachments/assets/abe87b78-a777-4ce2-add2-be42239d726f" />
+
 ## Features
 - Defines a `User` model with identifiable properties.
 - Implements a reusable `UserView` for displaying user details.
