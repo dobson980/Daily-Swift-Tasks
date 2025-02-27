@@ -3,6 +3,8 @@
 ## Overview
 **EnvirornmentKeys** is a SwiftUI project demonstrating how to create and use custom `EnvironmentKey` values. This approach allows you to share values across multiple views in a structured and reusable way.
 
+<img width="145" alt="image" src="https://github.com/user-attachments/assets/7e601d89-5c05-477c-8ddc-622930559d9c" />
+
 ## Features
 - Implements a custom `EnvironmentKey` (`DadsKey`) to store and share values.
 - Extends `EnvironmentValues` to make accessing the key easy.
