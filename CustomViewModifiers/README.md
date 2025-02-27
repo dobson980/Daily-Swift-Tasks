@@ -3,6 +3,8 @@
 ## Overview
 **CustomViewModifiers** is a SwiftUI project that demonstrates how to create and apply custom view modifiers. This project includes a `DadsStyle` modifier that enhances text styling with a unique appearance.
 
+<img width="330" alt="image" src="https://github.com/user-attachments/assets/200fea4e-0175-4fb4-9560-1b505bd78b8f" />
+
 ## Features
 - Implements a custom `ViewModifier` named `DadsStyle`.
 - Applies the modifier to a `Text` view in `ContentView`.
