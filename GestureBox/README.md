@@ -3,6 +3,8 @@
 ## Overview
 **GestureBox** is a SwiftUI project that demonstrates interactive gesture handling. The app includes a draggable and tappable box that changes color when tapped and moves in response to drag gestures.
 
+![draggablebox](https://github.com/user-attachments/assets/907b1810-fc09-4994-9246-709ae60af8a7)
+
 ## Features
 - Uses `DragGesture` to move the box around the screen.
 - Implements `onTapGesture` to randomly change the box's color.
