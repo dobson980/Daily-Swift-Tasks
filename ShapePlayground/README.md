@@ -3,6 +3,8 @@
 ## Overview
 **ShapePlayground** is a SwiftUI project that demonstrates how to create and manipulate triangle shapes using `Path` and `CGAffineTransform`. The app arranges triangles in a grid layout, applying transformations such as flipping and mirroring.
 
+<img width="280" alt="image" src="https://github.com/user-attachments/assets/4643f8fe-6f5e-470c-b1f4-f1f19ac6ad96" />
+
 ## Features
 - Uses `Path` to create a custom triangle shape.
 - Applies `CGAffineTransform` to flip and mirror shapes.
