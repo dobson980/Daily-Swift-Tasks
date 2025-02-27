@@ -3,6 +3,8 @@
 ## Overview
 **SwiftUIProgress** is a SwiftUI project that demonstrates a simple animated progress bar with state management. The project includes a start/reset button that simulates a download process using async tasks and animations.
 
+![progressbar](https://github.com/user-attachments/assets/2064a117-5c66-4d22-a68b-027ba35302af)
+
 ## Features
 - Uses `@State` properties to manage progress and animation.
 - Implements a custom progress bar using `Capsule` and `HStack`.
