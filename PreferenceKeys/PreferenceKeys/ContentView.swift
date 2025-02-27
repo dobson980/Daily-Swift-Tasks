@@ -20,7 +20,7 @@ struct ContentView: View {
                 // Title for the app.
                 Text("Dads App")
                 // Displays the current value coming from the child view.
-                Text("Child App: \(childAppValue)")
+                Text("Child View: \(childAppValue)")
             }
             // Adds some space below the text before the next section.
             .padding(.bottom, 10)
