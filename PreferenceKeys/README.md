@@ -3,6 +3,8 @@
 ## Overview
 **PreferenceKeys** is a SwiftUI project that demonstrates how to use `PreferenceKey` to pass data **up** the view hierarchy. This approach allows child views to update values that parent views can observe and respond to.
 
+![childview](https://github.com/user-attachments/assets/8afdb3e8-5b89-4f43-9331-4ebf326d0d32)
+
 ## Features
 - Implements a custom `PreferenceKey` for passing data up the view hierarchy.
 - Uses a SwiftUI `TextField` inside a child view to update the parent's state.
