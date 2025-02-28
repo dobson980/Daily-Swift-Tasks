@@ -3,6 +3,8 @@
 ## Overview
 **ShapeAnimations** is a SwiftUI project demonstrating how to animate shape transformations using `rotationEffect` and `@State` properties. This project focuses on smoothly rotating a rectangle when a button is pressed.
 
+![shape animatio](https://github.com/user-attachments/assets/127463d8-458c-497b-97c1-3e8a4773b57f)
+
 ## Features
 - Uses `@State` to track the rotation angle of a shape.
 - Animates a `Rectangle` using `rotationEffect` and `easeInOut` animation.
