@@ -3,6 +3,8 @@
 ## Overview
 **ButtonAnimations** is a SwiftUI project demonstrating how to create an interactive button with dynamic color changes and animations using `symbolEffect`.
 
+![buttonanimation](https://github.com/user-attachments/assets/8f1b2248-1c5e-4e52-97ce-6e8fd7bcc4ae)
+
 ## Features
 - Uses `@State` to track and update the button's ring color.
 - Applies SF Symbol rendering with `.palette` mode for multi-color effects.
