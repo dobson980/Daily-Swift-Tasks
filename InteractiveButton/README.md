@@ -3,6 +3,8 @@
 ## Overview
 **InteractiveButton** is a SwiftUI project demonstrating how to create an animated button using `scaleEffect` and asynchronous state management. This project features a button that scales up when tapped and smoothly returns to its original size.
 
+![animatedButton](https://github.com/user-attachments/assets/7f0f29b8-7703-4341-8964-031b727ee697)
+
 ## Features
 - Uses `@State` to track the button’s scale.
 - Implements an animated scaling effect when the button is pressed.
