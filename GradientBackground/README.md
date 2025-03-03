@@ -3,6 +3,8 @@
 ## Overview
 **GradientBackground** is a SwiftUI project demonstrating how to use different types of gradients as backgrounds within a `TabView`. It includes both `LinearGradient` and `RadialGradient`, showcasing how to apply them using a reusable `GradientView`.
 
+![GradientBG](https://github.com/user-attachments/assets/0c97c41e-3df1-4ece-9c0e-2e4cf2550a68)
+
 ## Features
 - Implements a `TabView` to switch between gradient types.
 - Uses `LinearGradient` and `RadialGradient` to create visually appealing backgrounds.
