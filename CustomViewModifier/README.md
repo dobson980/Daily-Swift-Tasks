@@ -3,6 +3,8 @@
 ## Overview
 **CustomViewModifier** is a SwiftUI project demonstrating how to create and apply custom view modifiers. The project showcases two custom text modifiers that style text differently.
 
+![image](https://github.com/user-attachments/assets/c9578ba7-7000-467a-9e3d-21cbb645390a)
+
 ## Features
 - Implements two custom `ViewModifier` structs (`BigAndBlueText` and `BigAndRedText`).
 - Uses an extension on `View` to simplify applying `BigAndBlueText`.
