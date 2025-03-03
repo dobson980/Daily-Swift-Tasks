@@ -3,6 +3,8 @@
 ## Overview
 **ListFooterExample** is a SwiftUI project demonstrating how to use `List` with section headers and footers. This project showcases a list of automobiles with a footer displaying the total count of items.
 
+![ListFooter](https://github.com/user-attachments/assets/89df43f6-f37b-47b7-908e-85da16afe992)
+
 ## Features
 - Uses `List` and `Section` for structured data display.
 - Implements a header to label the section.
