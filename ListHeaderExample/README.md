@@ -3,6 +3,8 @@
 ## Overview
 **ListHeaderExample** is a SwiftUI project demonstrating how to create a `List` with multiple sections, each containing a header and categorized items.
 
+<img width="306" alt="image" src="https://github.com/user-attachments/assets/d9275b5e-ff47-468d-a426-f2d73b44d80c" />
+
 ## Features
 - Uses `List` and `Section` to structure data effectively.
 - Displays categorized lists for animals, food, drinks, and vehicles.
