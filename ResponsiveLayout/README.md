@@ -3,6 +3,8 @@
 ## Overview
 **ResponsiveLayout** is a SwiftUI project demonstrating how to create adaptive layouts using `GeometryReader`. The project ensures UI elements scale proportionally based on available screen space, making it ideal for building responsive designs.
 
+![ResponsiveLayout](https://github.com/user-attachments/assets/52ef9086-3216-4166-adae-f6649cf816a2)
+
 ## Features
 - Uses `GeometryReader` to obtain dynamic layout dimensions.
 - Adjusts shape sizes relative to the smallest screen dimension.
