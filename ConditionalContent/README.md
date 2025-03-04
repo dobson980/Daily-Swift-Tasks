@@ -3,6 +3,8 @@
 ## Overview
 **ConditionalContent** is a SwiftUI project demonstrating how to display content conditionally based on state changes. The project features a button that toggles the visibility of additional details using smooth animations.
 
+![entraContent](https://github.com/user-attachments/assets/c798b8b2-5426-4883-8dac-678bc03b119d)
+
 ## Features
 - Uses `@State` to control the visibility of extra content.
 - Implements an asymmetric transition effect (`.slide` for insertion, `.opacity` for removal).
