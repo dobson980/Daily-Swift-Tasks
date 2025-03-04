@@ -3,6 +3,8 @@
 ## Overview
 **CustomTransitions** is a SwiftUI project demonstrating how to animate text transitions using opacity and position changes. The project features a button-triggered animation that reveals a "SURPRISE!" message with a smooth fade-in and movement effect.
 
+![transition](https://github.com/user-attachments/assets/f15ee387-8efd-4f00-94fd-49454536fbc8)
+
 ## Features
 - Uses `@State` properties to control opacity and vertical position.
 - Implements a smooth transition using `withAnimation(.linear(duration: 3))`.
