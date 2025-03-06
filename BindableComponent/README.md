@@ -3,6 +3,8 @@
 ## Overview
 **BindableComponent** is a SwiftUI project demonstrating how to use `@Binding` to create a reusable toggle component. The project features a toggle switch that updates an image dynamically based on state changes.
 
+![BindableComponent](https://github.com/user-attachments/assets/43ed3a45-925e-43fe-b478-36afdcd17b24)
+
 ## Features
 - Uses `@State` to manage the `raining` variable in `ContentView`.
 - Implements a `CustomToggle` component that binds to `@Binding`.
