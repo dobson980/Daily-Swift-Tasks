@@ -3,6 +3,8 @@
 ## Overview
 **ColorPicker** is a SwiftUI project that demonstrates how to use a `ColorPicker` to dynamically change the color of text. This project shows how to bind a selected color to a `@State` property and apply it to a text view in real-time.
 
+![ColorPicker](https://github.com/user-attachments/assets/9a5ff4dc-4b35-42e5-ab0e-456a43e07cd5)
+
 ## Features
 - Uses `@State` to track the selected color.
 - Updates the text’s foreground color dynamically as the user picks a color.
