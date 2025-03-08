@@ -3,6 +3,8 @@
 ## Overview
 **CustomSlider** is a SwiftUI project demonstrating how to create a custom half-circle progress view paired with a slider to control progress. The project visualizes progress using a `HalfCircleProgressView` and allows users to interactively adjust the value.
 
+![customSlider](https://github.com/user-attachments/assets/9d3540ad-592b-471a-a8a9-b389f240194c)
+
 ## Features
 - Implements a `HalfCircleProgressView` to display progress in a half-circle format.
 - Uses a `Slider` to dynamically adjust the progress value.
