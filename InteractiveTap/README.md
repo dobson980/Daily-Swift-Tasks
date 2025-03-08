@@ -3,6 +3,8 @@
 ## Overview
 **InteractiveTap** is a SwiftUI project demonstrating how to create interactive tap animations using `sensoryFeedback`, `onTapGesture`, and `withAnimation`. The project enhances user interaction by providing both visual scaling effects and haptic feedback.
 
+![interactiveTap](https://github.com/user-attachments/assets/a83848c5-e8e3-4252-ae37-809cffe0d15b)
+
 ## Features
 - Uses `@State` to track tap-triggered animations.
 - Applies `sensoryFeedback(.success)` for haptic feedback on tap.
