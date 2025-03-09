@@ -3,6 +3,8 @@
 ## Overview
 **ModalWithDismiss** is a SwiftUI project demonstrating how to present and dismiss a modal using `.sheet` and `@Environment(\.dismiss)`. The project displays an informational modal about SwiftUI, which the user can dismiss via a button.
 
+![ModalWithDismiss](https://github.com/user-attachments/assets/ab933d60-288d-445a-b2f1-11a5e7326e97)
+
 ## Features
 - Uses `@State` to track modal presentation.
 - Implements `.sheet` to present the modal view.
