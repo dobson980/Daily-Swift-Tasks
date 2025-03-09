@@ -3,6 +3,8 @@
 ## Overview
 **CustomBadge** is a SwiftUI project demonstrating how to create a reusable custom badge view. The project features a `BadgeView` that dynamically displays a badge count and integrates it into a text label.
 
+<img width="309" alt="image" src="https://github.com/user-attachments/assets/78b54812-bde2-4410-bad8-f8487adda057" />
+
 ## Features
 - Implements a reusable `BadgeView` that displays a numeric badge count.
 - Uses a `RoundedRectangle` with a text overlay to represent the badge.
