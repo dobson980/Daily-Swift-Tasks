@@ -3,6 +3,8 @@
 ## Overview
 **PhotoGallery** is a SwiftUI project demonstrating how to create a dynamic photo grid using `LazyVGrid`. The project loads image assets dynamically based on an index and displays them in a scrollable grid layout.
 
+![PhotoGallery](https://github.com/user-attachments/assets/10a58a9f-40b7-41da-a8cc-e9e7cf030743)
+
 ## Features
 - Uses `LazyVGrid` to create an adaptive grid layout.
 - Loads images dynamically using `GalleryItem`.
