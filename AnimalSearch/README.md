@@ -3,6 +3,8 @@
 ## Overview
 **AnimalSearch** is a SwiftUI project that demonstrates how to implement a simple search feature within a list. Users can filter a list of animals by typing into a search bar, which dynamically updates the displayed results.
 
+![AnimalSearch](https://github.com/user-attachments/assets/7deea2f0-0a76-446a-9ae1-9162c3ddca18)
+
 ## Features
 - Uses `@State` to track user search input.
 - Implements `List` to display a dynamic list of animals.
