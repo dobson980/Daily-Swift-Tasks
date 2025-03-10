@@ -3,6 +3,8 @@
 ## Overview
 **Segments** is a SwiftUI project demonstrating how to create a custom segmented control using buttons and bindings. The project allows users to select different segments, updating the displayed selection dynamically.
 
+![Segments](https://github.com/user-attachments/assets/8f32d147-c00f-4b41-8a80-d076e4a7217d)
+
 ## Features
 - Implements a `SegmentControl` that updates the selected segment using `@Binding`.
 - Uses an enum (`Segments`) to define segment options.
