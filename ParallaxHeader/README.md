@@ -3,6 +3,8 @@
 ## Overview
 **ParallaxHeader** is a SwiftUI project demonstrating how to create a scrolling effect where the background image moves at a different speed than the foreground content, achieving a parallax effect.
 
+![ParallaxHeader](https://github.com/user-attachments/assets/58184676-7e01-4aed-8757-450728acdb28)
+
 ## Features
 - Uses `ScrollView` to create a scrollable foreground.
 - Implements `GeometryReader` to track the vertical scroll offset.
