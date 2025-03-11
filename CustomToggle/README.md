@@ -3,6 +3,8 @@
 ## Overview
 **CustomToggle** is a SwiftUI project demonstrating how to build a custom toggle switch using `@Binding`. This reusable component provides a simple, animated toggle UI that can be controlled by a parent view.
 
+![CustomToggle](https://github.com/user-attachments/assets/02d6d38a-f226-42d4-bd89-05508ce5f74d)
+
 ## Features
 - Uses `@Binding` for two-way data flow between the toggle and its parent view.
 - Implements a `ZStack` with a rounded rectangle as the track and a moving circle as the thumb.
