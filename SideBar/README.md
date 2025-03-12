@@ -3,6 +3,8 @@
 ## Overview
 **SideBar** is a SwiftUI project demonstrating how to create a slide-in sidebar menu using `ZStack` and `@State`. The sidebar appears when triggered by a button and smoothly toggles visibility.
 
+![Sidebar](https://github.com/user-attachments/assets/4d30a80b-1d04-439a-9e7b-78ad0a1d0a18)
+
 ## Features
 - Uses `@State` to control sidebar visibility.
 - Implements `ZStack` to layer the sidebar behind the main content.
