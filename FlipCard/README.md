@@ -3,6 +3,8 @@
 ## Overview
 **FlipCard** is a SwiftUI project demonstrating how to create an interactive flipping card using `@Binding` and `rotation3DEffect`. The card smoothly transitions between a front and back side when tapped.
 
+![FlipCard](https://github.com/user-attachments/assets/3f4ce980-9a4b-42ed-a02e-5605fde0e364)
+
 ## Features
 - Uses `@Binding` to control the flip state.
 - Implements `ZStack` to overlay the front and back views.
