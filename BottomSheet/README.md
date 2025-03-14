@@ -3,6 +3,8 @@
 ## Overview
 **BottomSheet** is a SwiftUI project demonstrating how to create a reusable bottom sheet that slides up from the bottom of the screen. The sheet can be dismissed by dragging it downward or toggling its visibility via a button.
 
+![BottomSheet](https://github.com/user-attachments/assets/c0f5a560-952e-420c-aa0f-35259e24b8e4)
+
 ## Features
 - Uses `@State` to control bottom sheet visibility.
 - Implements `ZStack` to layer the bottom sheet behind the main content.
