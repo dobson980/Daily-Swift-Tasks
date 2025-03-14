@@ -3,6 +3,8 @@
 ## Overview
 **RadialMenu** is a SwiftUI project demonstrating how to create an expandable radial menu with animated icons positioned around a central toggle button. The menu expands when tapped, revealing additional options, and collapses when tapped again.
 
+![Radial Menu](https://github.com/user-attachments/assets/0b275d05-c5f3-4c11-9567-a470a116aa08)
+
 ## Features
 - Uses `@Binding` to control the expanded/collapsed state of the menu.
 - Animates menu icons using `withAnimation(.linear(duration: 0.5))`.
