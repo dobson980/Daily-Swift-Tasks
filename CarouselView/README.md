@@ -3,6 +3,8 @@
 ## Overview
 **CarouselView** is a SwiftUI project demonstrating how to create a horizontally scrolling workout selection interface. Each workout is represented by a card containing an SF Symbol and a workout name.
 
+![CarouselVIew](https://github.com/user-attachments/assets/71e885dd-b96f-4486-9aff-f59372287c6b)
+
 ## Features
 - Uses `ScrollView(.horizontal)` for smooth horizontal scrolling.
 - Implements `ZStack` to overlay content inside each card.
