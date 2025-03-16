@@ -3,6 +3,8 @@
 ## Overview
 **RandomQuote** is a SwiftUI project that fetches and displays random inspirational quotes using the Forismatic API. Users can tap a button to retrieve a new quote dynamically.
 
+![RandomQuote](https://github.com/user-attachments/assets/80704781-e14d-4866-b905-224916301e78)
+
 ## Features
 - Fetches a random quote asynchronously from the Forismatic API.
 - Displays the quote with the author’s name in a structured UI.
