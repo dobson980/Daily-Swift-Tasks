@@ -7,67 +7,69 @@
 
 import SwiftUI
 
-// ContentView serves as the main view of the app and demonstrates how the ErrorBannerView works.
-// It includes a countdown, a button to trigger a "self-destruct" sequence (i.e. an error),
-// and overlays the error banner at the top of the screen when the error is triggered.
+// ContentView serves as the main view demonstrating the ErrorBannerView and a self-destruct trigger.
+// It includes a countdown and a button that triggers the error banner. The button's appearance
+// changes when it's disabled, i.e. when either an error is being displayed or the countdown is active.
 struct ContentView: View {
-    // The current countdown value, shown as a large number.
+    // The current countdown value, displayed in large numbers.
     @State private var count: Int = 3
-    // A Boolean that controls whether the error banner is displayed.
+    // Controls whether the error banner (self-destruct) is displayed.
     @State private var selfDestructed: Bool = false
-    // A Boolean that indicates if the countdown is active. While true, the countdown number is visible.
+    // Indicates whether the countdown is actively running.
     @State private var countingDown: Bool = false
     
     var body: some View {
-        // ZStack is used to layer the error banner behind the main content.
+        // ZStack layers the error banner behind the main content.
         ZStack {
-            // ErrorBannerView is the custom error banner that slides down when an error occurs.
-            // It is controlled by the 'selfDestructed' binding. When true, the banner appears.
+            // ErrorBannerView appears at the top when selfDestructed is true.
             ErrorBannerView(presentError: $selfDestructed, errorMessage: "BOOM!!!")
             
-            // The main content is organized in a vertical stack.
+            // Main content arranged vertically.
             VStack {
-                Spacer()  // Spacer pushes content towards the center vertically.
+                Spacer() // Pushes the content toward the center vertically.
                 
-                // The countdown number, displayed in a large, bold font.
-                // Its opacity is controlled by 'countingDown', so it only appears during the countdown.
+                // Displays the countdown number with a large, bold font.
+                // Its opacity is controlled by countingDown so that it only shows during the countdown.
                 Text("\(count)")
                     .font(.system(size: 80, weight: .bold))
                     .opacity(countingDown ? 1 : 0)
                 
-                Spacer()  // Spacer adds vertical space below the countdown.
+                Spacer() // Provides vertical spacing below the countdown.
                 
-                // The button triggers the self-destruct sequence.
-                // When pressed, it calls the 'triggerSelfDestruct()' function.
+                // Button that triggers the self-destruct sequence.
                 Button {
                     triggerSelfDestruct()
                 } label: {
                     ZStack {
-                        // The button background is a rounded rectangle filled with red.
+                        // Button background:
+                        // Uses a rounded rectangle with red fill when active.
+                        // When disabled (selfDestructed or countingDown is true), it changes to a light gray.
                         RoundedRectangle(cornerRadius: 20)
-                            .fill(Color.red)
+                            .fill((selfDestructed || countingDown) ? Color(.systemGray6) : Color.red)
                             .frame(width: 200, height: 50)
-                        // The button label text.
+                        
+                        // Button label text:
+                        // The text appears in white when active and in black when disabled,
+                        // making the disabled state visually distinct.
                         Text("Trigger Self Destruct")
-                            .foregroundStyle(.white)
+                            .foregroundStyle((selfDestructed || countingDown) ? Color.black : Color.white)
                     }
                 }
-                // The button is disabled if the error banner is currently displayed or if a countdown is in progress.
+                // Disable the button when the error banner is shown or the countdown is active.
                 .disabled(selfDestructed || countingDown)
             }
-            .padding()  // Padding around the VStack keeps the content away from the screen edges.
+            .padding() // Adds padding around the main content.
         }
     }
     
-    // triggerSelfDestruct() simulates a self-destruct sequence.
-    // It starts a countdown, displays the error banner, waits a set period, and then resets the state.
+    // triggerSelfDestruct() simulates a self-destruct sequence by starting a countdown,
+    // displaying the error banner, waiting for a period, and then resetting the state.
     func triggerSelfDestruct() {
-        // Start a new asynchronous task.
         Task {
-            // Begin the countdown by setting countingDown to true.
+            // Begin the countdown.
             countingDown = true
             
-            // While the count is greater than zero, decrement every second.
+            // Countdown loop: decrement 'count' every second.
             while count > 0 {
                 try await Task.sleep(for: .seconds(1))
                 // Animate the countdown decrement with a bouncy effect.
@@ -76,11 +78,11 @@ struct ContentView: View {
                 }
             }
             
-            // Once the countdown finishes, turn off the countdown indicator.
+            // End the countdown.
             countingDown = false
-            // Trigger the error banner by setting selfDestructed to true.
+            // Show the error banner by setting selfDestructed to true.
             selfDestructed = true
-            // Wait 5 seconds while the error banner is visible.
+            // Keep the error banner visible for 5 seconds.
             try await Task.sleep(for: .seconds(5))
             // Reset the countdown and hide the error banner.
             count = 3
