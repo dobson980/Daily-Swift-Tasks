@@ -3,6 +3,8 @@
 ## Overview
 **ErrorBanner** is a SwiftUI project demonstrating how to display a temporary error message banner at the top of the screen. The app also includes a "self-destruct" feature, which triggers a countdown before displaying the error banner.
 
+![ErrorBanner](https://github.com/user-attachments/assets/ee43b189-3220-45de-bd64-85f67fc36dd8)
+
 ## Features
 - Implements `ErrorBannerView` to display an animated error banner.
 - Uses `@State` to control the countdown and banner visibility.
