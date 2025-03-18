@@ -3,6 +3,8 @@
 ## Overview
 **ActivityIndicator** is a SwiftUI project demonstrating how to create and animate a loading indicator using SF Symbols and rotation effects. The project includes a toggle button to start and stop the loading animation.
 
+![ActivityIndicator](https://github.com/user-attachments/assets/c05f8de8-e0ff-4ab7-8f40-9fa3bccb60d2)
+
 ## Features
 - Uses an SF Symbol to represent a loading spinner.
 - Implements `@Binding` to control animation state externally.
