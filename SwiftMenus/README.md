@@ -3,6 +3,8 @@
 ## Overview
 **SwiftMenus** is a SwiftUI project demonstrating how to use `NavigationView`, `ToolbarItem`, and `Menu` to create an interactive toolbar menu. This project shows how to structure menus with sections, actions, and nested menus.
 
+![SwiftMenus](https://github.com/user-attachments/assets/0e7ffdef-99ff-4ba3-abdc-2edcd9626a77)
+
 ## Features
 - Uses `NavigationView` to wrap a structured layout.
 - Implements a `ToolbarItem` to add a menu button in the navigation bar.
