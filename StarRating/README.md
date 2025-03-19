@@ -3,6 +3,8 @@
 ## Overview
 **StarRating** is a SwiftUI project that allows users to rate an app using a 5-star rating system. The project includes interactive stars that update the rating dynamically when tapped.
 
+![StarRating](https://github.com/user-attachments/assets/4a740797-ea7f-442f-9910-f9df4913e0c0)
+
 ## Features
 - Uses `@Binding` to allow external control of the rating.
 - Implements an interactive star-based rating system with `Button` elements.
