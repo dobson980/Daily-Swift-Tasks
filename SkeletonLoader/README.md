@@ -3,6 +3,8 @@
 ## Overview
 **SkeletonLoader** is a SwiftUI project demonstrating how to create a shimmering skeleton loader effect using `LinearGradient` and `GeometryReader`. The project includes a placeholder animation that mimics loading states in apps.
 
+![Shimmer](https://github.com/user-attachments/assets/01c8bf62-a278-4507-923e-b52c2410c4b4)
+
 ## Features
 - Implements a shimmering effect using a moving gradient overlay.
 - Uses `GeometryReader` to dynamically adjust the gradient width.
