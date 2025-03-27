@@ -7,68 +7,46 @@
 
 import SwiftUI
 
+/**
+ A view that displays the main interface for the SwiftStock app.
+
+ This view leverages the environment object `StockViewModel` to manage and display stock data or present an error banner.
+ */
 struct ContentView: View {
-    @State private var stockSymbol = ""
-    @State private var stockQuote: GlobalQuote?
-    @State private var presentError = false
-    @State private var errorMessage = ""
+    /// The environment object providing stock data and actions.
+    @EnvironmentObject var viewModel: StockViewModel
+    
+    /// An instance of `AlphavantageService` for API interactions (currently not used in the view logic).
+    let apiService = AlphavantageService()
+    
+    /**
+     The body property presents the view's content.
+     
+     - If a valid stock quote exists, it displays the stock details along with a button to clear the data.
+     - Otherwise, it shows an error banner overlaid on a text field, where users can input a stock symbol.
+     */
     var body: some View {
         VStack {
-            if stockQuote != nil {
-                Spacer()
-                Text("Stock Symbol: \(stockQuote?.symbol ?? "")")
-                Text("Open: \(stockQuote?.open ?? "")")
-                Text("High: \(stockQuote?.high ?? "")")
-                Text("Low: \(stockQuote?.low ?? "")")
-                Text("Price: \(stockQuote?.price ?? "")")
-                Text("Volume: \(stockQuote?.volume ?? "")")
-                Text("Change: \(stockQuote?.changePercent ?? "")")
-                Spacer()
-                Button("Clear") {
-                    stockQuote = nil
-                    stockSymbol = ""
-                }.buttonStyle(.borderedProminent)
+            // Display stock details when available.
+            if let stockQuote = viewModel.stockQuote {
+                StockDetails(stockData: stockQuote)
+                Button("Cear Data") {
+                    viewModel.clearData()
+                }
+                .buttonStyle(.borderedProminent)
             } else {
+                // Present error message and input field when no stock data is available.
                 ZStack {
-                    ErrorBanner(isShowing: $presentError, errorText: errorMessage)
+                    ErrorBanner(isShowing: $viewModel.presentError, errorText: viewModel.errorMessage)
                     VStack {
                         Spacer()
-                        TextField("Enter a stock symbol", text: $stockSymbol)
+                        // Text field for entering the stock ticker symbol.
+                        TextField("Enter a stock symbol", text: $viewModel.stockSymbol)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                             .onSubmit {
+                                // Trigger a stock data fetch when the user submits the symbol.
                                 Task {
-                                    do {
-                                        stockQuote = try await fetchStockData(for: stockSymbol)
-                                    } catch let apiLoadError as LoadAPIKeyError {
-                                        switch apiLoadError {
-                                        case .fileNotFound:
-                                            presentError.toggle()
-                                            errorMessage = "API Key File Not Found"
-                                        case .dictionaryNotFound:
-                                            presentError.toggle()
-                                            errorMessage = "API Key Not Found"
-                                        case .apiKeyNotFound:
-                                            presentError.toggle()
-                                            errorMessage = "API Key Not Found"
-                                        }
-                                    } catch let apiError as StockAPIError {
-                                        switch apiError {
-                                        case .invalidURL:
-                                            presentError.toggle()
-                                            errorMessage = "Invalid URL"
-                                        case .invalidResponse:
-                                            presentError.toggle()
-                                            errorMessage = "Invalid Response"
-                                        case .noTickerFound:
-                                            presentError.toggle()
-                                            errorMessage = "Invalid stock symbol"
-                                        case .invalidData:
-                                            presentError.toggle()
-                                            errorMessage = "Invalid Data"
-                                        }
-                                    } catch {
-                                        print("Unexpected Error: \(error)")
-                                    }
+                                    await viewModel.fetchStockData()
                                 }
                             }
                     }
@@ -77,103 +55,14 @@ struct ContentView: View {
         }
         .padding()
     }
-    
-    func loadAPIKey() throws -> String {
-        guard let path = Bundle.main.path(forResource: "APIKeys", ofType: "plist") else {
-            throw LoadAPIKeyError.fileNotFound
-        }
-        
-        guard let dict = NSDictionary(contentsOfFile: path) as? [String: Any] else {
-            throw LoadAPIKeyError.dictionaryNotFound
-        }
-        
-        guard let apiKey = dict["StockAPIKey"] as? String else {
-            throw LoadAPIKeyError.apiKeyNotFound
-        }
-        
-        print("API Key: \(apiKey)")
-        return apiKey
-        
-    }
-    
-    func fetchStockData(for ticker: String) async throws -> GlobalQuote {
-        print("Fetching stock data for \(ticker)")
-        let apiKey = try loadAPIKey()
-        let urlString = "https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=\(ticker)&apikey=\(apiKey)"
-        guard let url = URL(string: urlString) else {
-            throw StockAPIError.invalidURL
-        }
-        
-        let (data, response) = try await URLSession.shared.data(from: url)
-        
-        guard (response as? HTTPURLResponse)?.statusCode == 200 else {
-            throw StockAPIError.invalidResponse
-        }
-        
-        if let json = try JSONSerialization.jsonObject(with: data) as? [String: Any],
-           let globalQuote = json["Global Quote"] as? [String: Any],
-           globalQuote.isEmpty {
-              throw StockAPIError.noTickerFound
-           }
-        
-        do {
-            print("Data: \(String(data: data, encoding: .utf8) ?? "")")
-            let quote = try JSONDecoder().decode(StockQuoteResponse.self, from: data)
-            if quote.globalQuote.symbol == "" {
-                throw StockAPIError.noTickerFound
-            } else {
-                return quote.globalQuote
-            }
-        } catch {
-            throw StockAPIError.invalidData
-        }
-    }
-    
 }
 
-enum LoadAPIKeyError: Error {
-    case fileNotFound
-    case dictionaryNotFound
-    case apiKeyNotFound
-}
-
-enum StockAPIError: Error {
-    case invalidURL
-    case invalidResponse
-    case noTickerFound
-    case invalidData
-}
-
-struct GlobalQuote: Decodable {
-    var symbol: String
-    var open: String
-    var high: String
-    var low: String
-    var price: String
-    var volume: String
-    var change: String
-    var changePercent: String
-    
-    enum CodingKeys: String, CodingKey {
-        case symbol = "01. symbol"
-        case open = "02. open"
-        case high = "03. high"
-        case low = "04. low"
-        case price = "05. price"
-        case volume = "06. volume"
-        case change = "09. change"
-        case changePercent = "10. change percent"
-    }
-}
-
-struct StockQuoteResponse: Decodable {
-    let globalQuote: GlobalQuote
-    
-    enum CodingKeys: String, CodingKey {
-        case globalQuote = "Global Quote"
-    }
-}
-
+/**
+ A preview provider for Xcode Canvas to showcase `ContentView`.
+ 
+ The preview injects an instance of `StockViewModel` into the environment to simulate application behavior.
+ */
 #Preview {
     ContentView()
+        .environmentObject(StockViewModel())
 }
