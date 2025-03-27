@@ -3,6 +3,8 @@
 ## Overview
 **SwiftStock** is a SwiftUI application that allows users to fetch and display real-time stock data using the [Alpha Vantage API](https://www.alphavantage.co/). The app provides a search interface to look up a stock ticker and view key information including price, volume, and daily changes.
 
+![SwiftStock](https://github.com/user-attachments/assets/f9da61c0-1fe1-48f6-9395-8848b332f1e7)
+
 ## Features
 - 🔍 Live stock lookup by ticker symbol
 - 📊 Displays open, high, low, price, volume, and percent change
