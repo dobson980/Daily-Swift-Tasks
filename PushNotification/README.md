@@ -3,7 +3,7 @@
 ## Overview
 **PushNotification** is a SwiftUI-based iOS application that demonstrates how to check, request, and display local push notification settings. It provides a fully interactive UI for testing notification permissions and includes color-coded visual feedback for each setting.
 
-<img src="https://github.com/user-attachments/assets/6ab9ca76-220f-4ff4-973d-215c0adce6eb" height="500" alt="PushNotification">
+<img src="https://github.com/user-attachments/assets/6ab9ca76-220f-4ff4-973d-215c0adce6eb" width="442" alt="PushNotification Demo">
 
 ## Features
 - 📬 Requests push notification permissions from the user
