@@ -121,7 +121,7 @@ struct ContentView: View {
             checkNotificationPermissions()
             requestNotificationPermission()
         }
-        .onChange(of: scenePhase) {newPhase, _ in
+        .onChange(of: scenePhase) {
             // Refresh notification settings when app becomes active
             checkNotificationPermissions()
         }
