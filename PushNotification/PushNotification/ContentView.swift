@@ -123,9 +123,7 @@ struct ContentView: View {
         }
         .onChange(of: scenePhase) {newPhase, _ in
             // Refresh notification settings when app becomes active
-            if newPhase == .active {
-                checkNotificationPermissions()
-            }
+            checkNotificationPermissions()
         }
         .padding()
     }
