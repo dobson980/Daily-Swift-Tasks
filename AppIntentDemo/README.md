@@ -3,6 +3,9 @@
 ## Overview
 **AppIntentDemo** is a SwiftUI project demonstrating how to control UI focus states using **App Intents** in iOS/macOS applications. The app allows system-wide shortcuts or voice commands (via Siri) to direct focus to specific text fields like email or password, offering a clean example of App Intent integration.
 
+![AppIntents](https://github.com/user-attachments/assets/58ad3a72-dc4a-4402-a4c6-859d2e56740e)
+
+
 ## Features
 - Two-way binding of UI focus using `@FocusState` and an observable controller.
 - Integration with App Intents framework to programmatically focus fields.
