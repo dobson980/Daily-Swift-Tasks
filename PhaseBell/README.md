@@ -3,6 +3,8 @@
 ## Overview
 **PhaseBell** is a SwiftUI animation demo that showcases how to use `phaseAnimator` to animate a bell icon in response to user interaction. This project demonstrates how to sequence complex animations through custom enum phases.
 
+![PhaseBell](https://github.com/user-attachments/assets/2a85846c-a082-4331-b5a7-1ac4279884a4)
+
 ## Features
 - 🔔 Animated bell icon using SwiftUI’s `phaseAnimator`
 - 🌀 Multiple animation phases: lift, shake left, shake right
