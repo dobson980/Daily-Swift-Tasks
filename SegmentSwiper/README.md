@@ -29,7 +29,7 @@
 
 ## 📸 Screenshots
 
-> Each tab displays a full-screen gradient view with corresponding color and text content.
+![SegmentSwiper](https://github.com/user-attachments/assets/0e52d79e-f61e-412d-8e7e-27a1eb3bd504)
 
 ---
 
