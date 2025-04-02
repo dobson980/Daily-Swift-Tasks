@@ -2,6 +2,8 @@
 
 AnimatedAsyncButton is a SwiftUI demo app showcasing how to build an animated, async-capable button that visually reflects different transaction states such as analyzing, processing, success, and failure.
 
+![AnimatedAsyncButton](https://github.com/user-attachments/assets/f357efdb-4376-4d3e-8048-43bc871bf184)
+
 ## ✨ Features
 
 - Smooth animated button with visual feedback.
