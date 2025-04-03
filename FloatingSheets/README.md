@@ -67,7 +67,7 @@
 
 ## 📸 Screenshots
 
-*(Add screenshots here to visually document views and transitions.)*
+![FloatingSheets](https://github.com/user-attachments/assets/99cb519f-7d59-443f-a120-ae83a4637708)
 
 ---
 
@@ -75,9 +75,3 @@
 
 **Thomas Dobson**  
 > _Crafting beautiful and functional SwiftUI experiences._
-
----
-
-## 📄 License
-
-MIT License. See [LICENSE](LICENSE) for details.
