@@ -3,7 +3,7 @@
 ## Overview
 **withAnimation_vs_animation** is a SwiftUI project that compares two common ways to animate view changes: attaching the `.animation(_:, value:)` modifier directly to views, and wrapping state changes inside `withAnimation(_:_:)`. The app uses simple rectangles and a shared toggle to highlight how each approach affects animation behavior.
 
-![withAnimation_vs_animation](https://github.com/user-attachments/assets/placeholder-withAnimation-vs-animation)
+![animation](https://github.com/user-attachments/assets/bdbedcca-bf21-4e70-ba46-0fe59f1ab568)
 
 ## Features
 - Demonstrates the difference between `.animation(_:, value:)` and `withAnimation(_:_:)`.
