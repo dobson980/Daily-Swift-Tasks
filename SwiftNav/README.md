@@ -6,8 +6,7 @@
 
 ## Screenshot
 
-<!-- Replace this with a real screenshot URL when available. -->
-![SwiftNav](https://github.com/user-attachments/assets/placeholder-swiftnav)
+![SwiftNav](https://github.com/user-attachments/assets/05a53f24-87e2-45a7-a1a6-4a3b176bf3da)
 
 ## Features
 
