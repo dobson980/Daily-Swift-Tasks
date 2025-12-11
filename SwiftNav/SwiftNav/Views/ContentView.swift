@@ -40,7 +40,7 @@ struct ContentView: View {
                 switch page {
                 case .orangePage:
                     ColoredPage(backgroundColor: .orange,
-                                buttonText: "Orange",
+                                buttonText: "Return",
                                 buttonColor: .orange
                     ) {
                         // From the orange page, jump back to the root.
@@ -48,7 +48,7 @@ struct ContentView: View {
                     }
                 case .redPage:
                     ColoredPage(backgroundColor: .red,
-                                buttonText: "Red",
+                                buttonText: "Return",
                                 buttonColor: .red
                     ) {
                         // From the red page, jump back to the root.
