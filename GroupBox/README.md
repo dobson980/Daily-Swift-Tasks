@@ -8,11 +8,8 @@ A small SwiftUI demo showing how to use `GroupBox` and custom styles to organize
 
 ## Screenshot
 
-> _Add a screenshot of the GroupBox demo running in the simulator here._
->
-> Example:
->
-> `![GroupBox](https://github.com/user-attachments/assets/your-screenshot-id)`
+<img width="350" alt="screenshot" src="https://github.com/user-attachments/assets/9430e361-9ddc-473e-8641-2ade5477d436" />
+
 
 ## Features
 
