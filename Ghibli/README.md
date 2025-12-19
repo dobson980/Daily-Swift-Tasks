@@ -4,7 +4,7 @@ A tabbed SwiftUI explorer for Studio Ghibli films, characters, and personalized 
 ## Overview
 **Ghibli** showcases how to coordinate multiple SwiftUI screens with shared view models, async/await networking, and persistent user preferences. It leans heavily on structured concurrency and observable objects so data flows cleanly between the films list, detail view, search tab, and favorites experience.
 
-![Ghibli](https://github.com/user-attachments/assets/placeholder)
+![ghibli](https://github.com/user-attachments/assets/b57c5651-d93e-4ae2-9d09-548c2eeac2eb)
 
 ## Features
 - 🔁 **Shared `@Observable` view models** power every tab, eliminating duplicate network calls and keeping favorites in sync.
