@@ -5,7 +5,7 @@ A lockable, two-column time picker with a slick edit toggle and animated focus.
 **CustomPicker** demonstrates how to build a dual-column time selector that stays read-only until explicitly unlocked. It highlights coordinated animations between scrolling columns, rounded container shapes, and an inline toggle that flips from a pencil to a checkmark.
 
 ## Screenshot
-![CustomPicker](https://github.com/user-attachments/assets/placeholder-custompicker)
+![CustomPicker](https://github.com/user-attachments/assets/0e8b7a95-522e-4f3d-8123-76c8c3311e1c)
 
 ## Features
 - Lockable edit mode that disables scrolling until the toggle is tapped, then animates spacing and corner radii open.
